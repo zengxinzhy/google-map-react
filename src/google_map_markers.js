@@ -110,13 +110,13 @@ export default class GoogleMapMarkers extends Component {
     );
   };
 
-  _onChildClick = () => {
+  _onChildClick = e => {
     if (this.props.onChildClick) {
       if (this.hoverChildProps_) {
         const hoverKey = this.hoverKey_;
         const childProps = this.hoverChildProps_;
         // click works only on hovered item
-        this.props.onChildClick(hoverKey, childProps);
+        this.props.onChildClick(hoverKey, childProps, e);
       }
     }
   };
